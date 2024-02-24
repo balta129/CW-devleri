@@ -11,7 +11,7 @@ namespace RepeatLesson
 {
     public class Program_CW6
     {
-        public static void Main_CW6(string[] args)
+        public static void Main_CW6 (string[] args)
         {
             /*
             Question Name : Equal Sides Of An Array
@@ -22,6 +22,7 @@ namespace RepeatLesson
                 int [] numbers = {1,1,10,50,100,50,-100,-50,-10,-1,-1,324};
                 
                 
+                bool match = false;
                 int sumright = 0;
                 int sumleft = 0;
                 for(int i = 0; i < numbers.Length; i++)
@@ -41,9 +42,11 @@ namespace RepeatLesson
                         sumleft = sumleft + numbers[p-1];
                         }
                     }
+                   
                     if(sumright == sumleft)
                     {
-                        Console.Write("Result: "+i);
+                        match = true;
+                        Console.Write("Result: index "+i);
                         break;
                     }
                     else
@@ -52,6 +55,11 @@ namespace RepeatLesson
                         sumleft = 0;
                     }
                 }
+                    Console.WriteLine(" ");
+                    if(match == false)
+                    {
+                    Console.Write("Result: -1");
+                    }
                 
             
  
