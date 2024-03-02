@@ -13,12 +13,12 @@ using Microsoft.VisualBasic;
 namespace RepeatLesson
 {
     public class Program_CW10
-    {
+    {   
         public static void Main_CW10(string[] args)
         {
             /* https://www.codewars.com/kata/52bc74d4ac05d0945d00054e/train/csharp
             */
-            string s = "sTTress";
+            string s = "aabbQcc";
             char[] array = new char[s.Length];
 
             for(int i = 0; i < s.Length; i++)
@@ -30,7 +30,7 @@ namespace RepeatLesson
             {   
                 int a = 0;
                 
-                 bool notrepeat = false;
+                 
                 for(int j = 0; j < s.Length; j++)
                 {
                     if(array[i] == array[j])
@@ -39,19 +39,19 @@ namespace RepeatLesson
                         b++;
                         if(a > 1)
                         {
-                            notrepeat = true;
+                            
                             break;
                         }
                     }
                 }
-                if(notrepeat == false)
+                if(a == 1)
                 {
                     Console.Write(s[i]);
                     break;
                 }
-                else if( notrepeat == true && b >= s.Length*2)
+                else if( b >= s.Length*2)
                 {
-                    Console.Write("");
+                    Console.Write(".");
                     break;
                 }       
             }   
